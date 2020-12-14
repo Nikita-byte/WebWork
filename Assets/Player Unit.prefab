@@ -25,14 +25,14 @@ GameObject:
   - component: {fileID: 1960810801259118872}
   - component: {fileID: 1960810801259118873}
   - component: {fileID: 1960810801259118878}
-  - component: {fileID: 1960810801259118879}
   - component: {fileID: 1960810801259118871}
   - component: {fileID: 1960810801259118868}
   - component: {fileID: 1960810801259118869}
   - component: {fileID: 1960810801259118874}
   - component: {fileID: 1960810801259118875}
   - component: {fileID: 114482389200712770}
-  - component: {fileID: 114901594440546914}
+  - component: {fileID: 114577935881980800}
+  - component: {fileID: 114242223724794610}
   m_Layer: 0
   m_Name: Player Unit
   m_TagString: Untagged
@@ -89,21 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5db5852721c9104e84196faa37a8549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1960810801259118879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960810801259118876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06c87add25fb55a45b3aafe9b40fe9a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!114 &1960810801259118871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +161,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!95 &1960810801259118874
 Animator:
   serializedVersion: 3
@@ -229,9 +214,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableBehaviours:
-  - {fileID: 1960810801259118879}
+  - {fileID: 114242223724794610}
   - {fileID: 1960810801491785185}
---- !u!114 &114901594440546914
+--- !u!114 &114577935881980800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,6 +229,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  damage:
+    baseValue: 0
+--- !u!114 &114242223724794610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960810801259118876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1b8508be8691b489bddf618cf9e2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motor: {fileID: 1960810801259118878}
+  myStats: {fileID: 114577935881980800}
+  reviveDelay: 5
+  gfx: {fileID: 1960620279030355402}
 --- !u!1001 &1960810801491785188
 PrefabInstance:
   m_ObjectHideFlags: 0

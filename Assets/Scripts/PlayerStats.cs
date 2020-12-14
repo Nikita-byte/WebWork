@@ -2,7 +2,7 @@
 using UnityEngine.Networking;
 
 
-public class PlayerStats : NetworkBehaviour
+public class PlayerStats : UnitStats
 {
 
 }

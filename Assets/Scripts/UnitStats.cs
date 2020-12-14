@@ -4,7 +4,6 @@ using UnityEngine.Networking;
 
 public class UnitStats : NetworkBehaviour
 {
-
     [SerializeField] int maxHealth;
     [SyncVar] int _curHealth;
 
